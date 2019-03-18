@@ -13,7 +13,7 @@ def get_arguments():
         return  options
 
 def change_mac (interface, new_maac)
-    print("Channing MAC address for " + interface + "to " new_maac)
+    print("Channing MAC address for " + interface + "to " + new_maac)
     subprocess.call(["ifconfig", interface, "down"])
     subprocess.call(["ifconfig", interface, "hw", "ether", new_maac])
     subprocess.call(["ifconfig", interface, "up"])
